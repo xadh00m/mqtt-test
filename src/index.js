@@ -9,7 +9,6 @@ client.on("message", handleMessage)
 async function handleMessage() {
   const timestamp = new Date().toJSON()
   await client.publish(`test/retain/${timestamp}`, "foo", { qos: 2, retain: true })
-  console.log(`${timestamp}: Message published`)
 }
 
 console.log("Waiting for messages...")
