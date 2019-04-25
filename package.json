@@ -1,0 +1,10 @@
+{
+  "name": "mqtt-test",
+  "private": true,
+  "scripts": {
+    "start": "node src"
+  },
+  "dependencies": {
+    "mqtt": "^2.18.8"
+  }
+}
