@@ -7,8 +7,7 @@ client.subscribe("test/foo", { qos: 2 })
 client.on("message", handleMessage)
 
 async function handleMessage() {
-  const timestamp = new Date().toJSON()
-  await client.publish(`test/retain/${timestamp}`, "foo", { qos: 2, retain: true })
+  await client.publish(`test/retain/existing`, "foo", { qos: 2, retain: true })
 }
 
 console.log("Waiting for messages...")
